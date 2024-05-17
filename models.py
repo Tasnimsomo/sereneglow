@@ -1,7 +1,8 @@
+#!/usr/bin/python3
+
 from sqlalchemy import Column, Integer, String, Float, ForeignKey
 from sqlalchemy.orm import relationship
 from sqlalchemy.ext.declarative import declarative_base
-
 
 Base = declarative_base()
 
@@ -13,6 +14,8 @@ class Customer(Base):
     email = Column(String(100))
     password = Column(String(100))
     orders = relationship('Order', backref='customer')
+    reviews = relationship('Review', backref='customer')
+    shopping_cart = relationship('ShoppingCart', backref='customer', uselist=False)
 
 class Product(Base):
     __tablename__ = 'products'
@@ -23,6 +26,7 @@ class Product(Base):
     description = Column(String(500))
     reviews = relationship('Review', backref='product')
     order_items = relationship('OrderItem', backref='product')
+    cart_items = relationship('CartItem', backref='product')
 
 class Order(Base):
     __tablename__ = 'orders'
@@ -33,20 +37,18 @@ class Order(Base):
     order_items = relationship('OrderItem', backref='order')
 
 class OrderItem(Base):
-
     __tablename__ = 'order_items'
 
     id = Column(Integer, primary_key=True)
-    order_id = Column(Integer, ForeignKey('order.id'))
+    order_id = Column(Integer, ForeignKey('orders.id'))
     product_id = Column(Integer, ForeignKey('products.id'))
     quantity = Column(Integer)
 
 class CartItem(Base):
-
     __tablename__ = 'cart_items'
 
     id = Column(Integer, primary_key=True)
-    cart_id = Column(Integer, ForeignKey('shoppingCarts.id'))
+    cart_id = Column(Integer, ForeignKey('shopping_carts.id'))
     product_id = Column(Integer, ForeignKey('products.id'))
     quantity = Column(Integer)
 
@@ -58,10 +60,10 @@ class ShoppingCart(Base):
     cart_items = relationship('CartItem', backref='cart')
 
 class Review(Base):
-    __tablename__  = 'reviews'
+    __tablename__ = 'reviews'
 
     id = Column(Integer, primary_key=True)
     customer_id = Column(Integer, ForeignKey('customers.id'))
-    product_id = Column(Integer, ForeignKey('customers.id'))
     product_id = Column(Integer, ForeignKey('products.id'))
-    comment = Column(String(500))
+    rating = Column(Integer)
+    review_text = Column(String(500))
