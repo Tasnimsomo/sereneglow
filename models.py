@@ -16,6 +16,7 @@ class Customer(Base):
     orders = relationship('Order', backref='customer')
     reviews = relationship('Review', backref='customer')
     shopping_cart = relationship('ShoppingCart', backref='customer', uselist=False)
+    
 
 class Product(Base):
     __tablename__ = 'products'
@@ -24,6 +25,7 @@ class Product(Base):
     name = Column(String(100))
     price = Column(Float)
     description = Column(String(500))
+    category = Column(String(500))
     reviews = relationship('Review', backref='product')
     order_items = relationship('OrderItem', backref='product')
     cart_items = relationship('CartItem', backref='product')
