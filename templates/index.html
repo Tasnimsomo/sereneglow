@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sereneglow</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jacquard+24&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+      footer {
+  background-color: #000;
+  color: #fff;
+  padding: 50px 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #ff85b4;
+  display: flex;
+  align-items: center;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #ff85b4;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-left: -270px;
+}
+
+.social-icons a {
+  margin: 0 5px;
+}
+
+.social-icons i {
+  font-size: 24px;
+  transition: transform 0.3s;
+}
+
+.social-icons i:hover {
+  transform: scale(1.2);
+}
+
+.decorative-line {
+  border-top: 1px solid #ff85b4;
+  margin: 20px auto;
+  width: 80%;
+}
+
+.developers, .copyright {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.developers p, .copyright p {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.shopping {
+  width: 23px;
+}
+
+.loo {
+  color: #ff85b4;
+}
+
+/* Responsive styles */
+
+@media only screen and (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: repeat(1, 1fr); /* Change to single column layout */
+  }
+
+  .social-icons {
+    margin-left: -340px;
+  }
+}
+    </style>
+    <style>
+        /* Custom CSS to apply the font to the specific element */
+        .custom-font {
+            font-family: "Jacquard 24", system-ui;
+            font-weight: bold; /* Make the text bold */
+            font-size: 36px; /* Increase the font size */
+            text-decoration: none; /* Remove underline */
+            color: black; /* Set text color to black */
+            transition: color 0.3s; /* Add transition effect for color change */
+        }
+
+        .custom-font:hover {
+            color: blue; /* Change color to blue on hover */
+        }
+
+        .navbar-brand {
+            background-color: transparent !important; /* Set background color to transparent */
+        }
+
+        .navbar-nav .nav-link {
+            font-weight: bold; /* Make the font bold */
+            margin-left: 20px; /* Adjust the left margin */
+            transition: color 0.3s; /* Add transition effect for color change */
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: blue; /* Change color to pink on hover */
+        }
+
+        /* Adjustments to the image column */
+        .image-column {
+            padding-top: 20px; /* Adjust the padding as needed */
+        }
+
+        .img-fluid {
+            max-height: 300px; /* Adjust the maximum height of the image */
+            width: auto; /* Ensure the width adjusts proportionally */
+            margin-top: 20px; /* Add some space on top of the image */
+        }
+
+        /* Background image styling */
+        .hero {
+            background-image: url('https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTExL2hpcHBvdW5pY29ybl9jb3NtZXRpY19tYWtlX3VwX2ZsYXRfbGF5X3BpbmtfYmFja2dyb3VuZF9iODQxY2U1MC1mNDRhLTQ4ODAtODEwMC1hMDc5Yjc4MjA3NDUuanBn.jpg'); /* Replace 'your-image-url.jpg' with your actual image URL */
+            background-size: cover; /* Cover the entire background */
+            background-position: center; /* Center the background image */
+            padding: 100px 0; /* Add padding to create space between navbar and content */
+        }
+    </style>
+    <style>
+        body {
+          font-family: 'Arial', sans-serif;
+          background-color: whitesmoke; /* Light pink background color */
+          margin: 0;
+          padding: 0;
+        }
+        .container {
+          display: flex;
+          flex-wrap: wrap;
+          padding: 40px;
+          justify-content: center;
+        }
+        .product-card {
+          background-color: white;
+          border-radius: 10px;
+          box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+          transition: transform 0.2s;
+          width: 300px;
+          margin: 15px;
+          overflow: hidden;
+        }
+        .product-card:hover {
+          transform: translateY(-10px);
+          box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+        .product-image img {
+          flex: 1 1 200px; /* Adjust the width of each product card */
+           border: 1px solid #ddd;
+            padding: 10px;
+          width: 100%;
+          height: 200px; /* Fixed height for the images */
+          object-fit: cover; /* Maintain aspect ratio */
+        }
+        .product-info {
+          padding: 20px;
+          text-align: center;
+        }
+        .product-info h4 {
+          margin: 10px 0;
+          font-size: 1.2em;
+          color: #333;
+        }
+        .product-info p {
+          margin: 10px 0;
+          color: #666;
+        }
+        .price {
+          font-size: 1.1em;
+          color: #e74c3c;
+          font-weight: bold;
+        }
+        .me {
+          margin-left: 25px;
+          color: black;
+          text-decoration: underline;
+          margin-top: 17px;
+        }
+        .add-to-cart {
+          margin-top: 15px;
+          padding: 10px 20px;
+          background-color: #ff6f61;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: background-color 0.3s, transform 0.3s;
+          font-size: 1em;
+        }
+        .add-to-cart:hover {
+          background-color: #e55b50;
+          transform: translateY(-2px);
+        }
+        .stars {
+          color: #ffcc00;
+          margin: 10px 0;
+        }
+        @media (max-width: 768px) {
+          .container {
+            padding: 20px;
+          }
+          .product-card {
+            width: 90%;
+          }
+        }
+
+        @media (min-width: 768px) and (max-width: 1000px){
+            .product-image {
+                grid-template-columns: repeat(1, 1fr);
+                grid-template-rows: repeat(1, 1fr);
+            }
+           
+}
+        .container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            padding: 0 20px;
+            margin-bottom: 40px;
+        }
+        .product-card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+        .product-card:hover {
+            transform: translateY(-10px);
+        }
+        .product-image img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 1px solid #ddd;
+        }
+        .product-info {
+            padding: 15px;
+            text-align: center;
+        }
+        .stars {
+            color: gold;
+            font-size: 14px;
+        }
+        .product-info h4 {
+            font-size: 18px;
+            margin: 10px 0;
+            color: #333;
+        }
+        .product-info p {
+            color: #777;
+            font-size: 14px;
+            margin: 5px 0;
+        }
+
+
+        .price {
+            color: #28a745;
+            font-weight: bold;
+            font-size: 16px;
+            margin: 10px 0;
+        }
+        .add-to-cart {
+            background-color: black;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        .add-to-cart:hover {
+            background-color: #218838;
+        }
+        .me {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 24px;
+            color: #333;
+        }
+        .hero {
+            background-image: url('https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTExL2hpcHBvdW5pY29ybl9jb3NtZXRpY19tYWtlX3VwX2ZsYXRfbGF5X3BpbmtfYmFja2dyb3VuZF9iODQxY2U1MC1mNDRhLTQ4ODAtODEwMC1hMDc5Yjc4MjA3NDUuanBn.jpg'); /* Replace 'your-image-url.jpg' with your actual image URL */
+            background-size: cover; /* Cover the entire background */
+            background-position: center; /* Center the background image */
+            padding: 100px 0; /* Add padding to create space between navbar and content */
+
+        }
+      </style>
+       <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .hero {
+            background-color: #fff;
+            padding: 100px 0;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero-title {
+            font-size: 48px;
+            color: #333;
+            margin-bottom: 20px;
+            font-weight: bold;
+            line-height: 1.2;
+        }
+
+        .hero-subtitle {
+            font-size: 18px;
+            color: #777;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn-primary {
+            background-color: #d32f2f;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .btn-primary:hover {
+            background-color: blue;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .col-md-6 {
+            flex: 0 0 50%;
+            max-width: 50%;
+            padding: 15px;
+        }
+
+        .text-md-left {
+            text-align: left;
+        }
+
+        .image-column {
+            text-align: center;
+        }
+
+        .img-fluid {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        @media (max-width: 767.98px) {
+            .hero-title {
+                font-size: 32px;
+            }
+
+            .hero-subtitle {
+                font-size: 16px;
+            }
+
+            .col-md-6 {
+                flex: 0 0 100%;
+                max-width: 100%;
+                text-align: center;
+            }
+
+            .text-md-left {
+                text-align: center;
+            }
+
+            .d-none {
+                display: block !important;
+            }
+        }
+        .container-fluid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            padding: 0 20px;
+            margin-bottom: 40px;
+        }
+        @media (max-width: 768px) {
+        .container-fluid {
+        grid-template-columns: repeat(1, 1fr); /* Change to 2 columns on smaller screens */
+    }
+}
+    </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid justify-content-center"> <!-- Center the content -->
+        <a class="navbar-brand custom-font" href="#" onclick="location.reload()">S e r e n e g l o w</a>
+        <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#makeup">Makeup</a></li>
+                <li class="nav-item"><a class="nav-link" href="#skincare">Skincare</a></li>
+                <li class="nav-item"><a class="nav-link" href="#fragrance">Fragrance</a></li>
+                <li class="nav-item"><a class="nav-link" href="#hair">Hair</a></li>
+                <!-- Hide login and register links if user is logged in -->
+                {% if not current_user.is_authenticated %}
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Log In / Register
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="/login">Log In</a></li>
+                            <li><a class="dropdown-item" href="/register">Register</a></li>
+                        </ul>
+                    </li>
+                {% endif %}
+                <!-- Show profile and logout links if user is logged in -->
+                {% if current_user.is_authenticated %}
+                    <li class="nav-item"><a class="nav-link" href="/profile">Profile</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/logout">Logout</a></li>
+                    <li class="nav-item"><a class="nav-link" id="my-cart" href="/cart">My Cart</a></li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="hero">
+  <div class="container">
+      <div class="row align-items-center">
+          <div class="col-md-6 text-md-left text-center">
+              <h1 class="hero-title">SUPERCHARG'D SKINCARE IN YOUR SHADE</h1>
+              <p class="hero-subtitle">Hydra Vizor Huez Tinted Moisturizer Mineral SPF 30 Sunscreen.</p>
+              <a href="#" class="btn btn-primary">SNEAK PEEK</a>
+          </div>
+           <div class="col-md-6 d-none d-md-block image-column">
+              <img src="https://img.freepik.com/free-photo/3d-rendering-pink-floral-arrangement_23-2150850901.jpg?size=626&ext=jpg&ga=GA1.1.1224184972.1714089600&semt=ais" alt="Product Image" class="img-fluid">
+          </div>
+      </div>
+  </div>
+</div>
+
+
+<body>
+  <div>
+      <h2 id="fragrance" class="me">FRAGRANCE</h2>
+  </div>
+  <div class="container-fluid">
+      <!-- Product 1 -->
+      <div class="product-card">
+        <div class="product-image">
+            <img src="https://elements.togetherjournal.com/uploads/2018/10/92dafa8f-1i2a1633.jpg" alt="Eau Fraiche">
+        </div>
+        <div class="product-info">
+            <div class="stars">★★★★★</div>
+            <h4><b>Eau Fraiche</b></h4>
+            <p>Long-lasting matte fragrance in various shades.</p>
+            <p class="price">$20</p>
+            <form action="{{ url_for('cart') }}" method="post">
+                <input type="hidden" name="product_name" value="Eau Fraiche">
+                <input type="hidden" name="product_price" value="20">
+                <button class="add-to-cart" type="submit">Add to Cart</button>
+            </form>
+        </div>
+    </div>
+    
+      <!-- Product 2 -->
+      <div class="product-card">
+        <div class="product-image">
+            <img src="https://rukminim2.flixcart.com/image/850/1000/xif0q/perfume/x/g/v/50-fruit-fragnance-perfume-perfume-sacroscent-men-women-original-imagqrcgnu3tvzns.jpeg?q=90&crop=false" alt="Eau de Toilette">
+        </div>
+        <div class="product-info">
+            <div class="stars">★★★★★</div>
+            <h4><b>Eau de Toilette</b></h4>
+            <p>Enchanting blend of jasmine, rose, and vanilla.</p>
+            <p class="price">$30</p>
+            <form action="{{ url_for('cart') }}" method="post">
+                <input type="hidden" name="product_name" value="Eau de Toilette">
+                <input type="hidden" name="product_price" value="30">
+                <button class="add-to-cart" type="submit">Add to Cart</button>
+            </form>
+        </div>
+    </div>
+    
+      <!-- Product 3 -->
+      <div class="product-card">
+        <div class="product-image">
+            <img src="https://m.media-amazon.com/images/I/71hezfkq5lL.jpg" alt="Eau de Cologne">
+        </div>
+        <div class="product-info">
+            <div class="stars">★★★★★</div>
+            <h4><b>Eau de Cologne</b></h4>
+            <p>An invigorating fragrance for men and women.</p>
+            <p class="price">$34</p>
+            <form action="{{ url_for('cart') }}" method="post">
+                <input type="hidden" name="product_name" value="Eau de Cologne">
+                <input type="hidden" name="product_price" value="34">
+                <button class="add-to-cart" type="submit">Add to Cart</button>
+            </form>
+        </div>
+    </div>
+    
+      <!-- Product 4 -->
+      <div class="product-card">
+        <div class="product-image">
+            <img src="https://c.ndtvimg.com/2022-10/41q03j48_perfumes650_625x300_17_October_22.jpg" alt="Woody">
+        </div>
+        <div class="product-info">
+            <div class="stars">★★★★★</div>
+            <h4><b>Woody</b></h4>
+            <p>Immerse yourself in the refreshing and invigorating scent of Woody.</p>
+            <p class="price">$20</p>
+            <form action="{{ url_for('cart') }}" method="post">
+                <input type="hidden" name="product_name" value="Woody">
+                <input type="hidden" name="product_price" value="20">
+                <button class="add-to-cart" type="submit">Add to Cart</button>
+            </form>
+        </div>
+    </div>
+  </div>
+
+  <div>
+    <h2 id="hair" class="me">Hair</h2>
+</div>
+<div class="container-fluid">
+    <!-- Product 1 -->
+    <div class="product-card">
+        <div class="product-image">
+            <img src="https://georgiemane.com/cdn/shop/files/22-HairMaskPDP-002-Georgiemane-1102_1x1_d45b0c08-46e5-454f-bde3-4697e43fb27b.jpg?v=1699319509" alt="Hair mask">
+        </div>
+        <div class="product-info">
+            <div class="stars">★★★★★</div>
+            <h4><b>Hair mask</b></h4>
+            <p>Revitalize and nourish your hair with our luxurious Hair Mask.</p>
+            <p class="price">$20</p>
+            <form action="{{ url_for('cart') }}" method="post">
+                <input type="hidden" name="product_name" value="Hair mask">
+                <input type="hidden" name="product_price" value="20">
+                <button class="add-to-cart" type="submit">Add to Cart</button>
+            </form>
+        </div>
+    </div>
+    
+    <!-- Product 2 -->
+    <div class="product-card">
+        <div class="product-image">
+            <img src="https://i5.walmartimages.com/seo/Pantene-Pro-V-Daily-Moisture-Renewal-Shampoo-27-7-oz_cf81ebfb-9d81-48f2-9297-eebcdeb5bdf0.bf7b0bfa8122a90c5b35bcb98688b57b.jpeg" alt="Pantene Shampoo">
+        </div>
+        <div class="product-info">
+            <div class="stars">★★★★★</div>
+            <h4><b>Pantene Shampoo</b></h4>
+            <p>Enchanting blend of jasmine, rose, and vanilla.</p>
+            <p class="price">$30</p>
+            <form action="{{ url_for('cart') }}" method="post">
+                <input type="hidden" name="product_name" value="Pantene Shampoo">
+                <input type="hidden" name="product_price" value="30">
+                <button class="add-to-cart" type="submit">Add to Cart</button>
+            </form>
+        </div>
+    </div>
+    
+    <!-- Product 3 -->
+    <div class="product-card">
+        <div class="product-image">
+            <img src="https://m.media-amazon.com/images/I/41fzL9D5suL.jpg" alt="Dove Conditioner">
+        </div>
+        <div class="product-info">
+            <div class="stars">★★★★★</div>
+            <h4><b>Dove Conditioner</b></h4>
+            <p>Deep conditioning for damaged hair.</p>
+            <p class="price">$34</p>
+            <form action="{{ url_for('cart') }}" method="post">
+                <input type="hidden" name="product_name" value="Dove Conditioner">
+                <input type="hidden" name="product_price" value="34">
+                <button class="add-to-cart" type="submit">Add to Cart</button>
+            </form>
+        </div>
+    </div>
+    
+    <!-- Product 4 -->
+    <div class="product-card">
+        <div class="product-image">
+            <img src="https://www.audora.in/cdn/shop/files/02_22101c69-2a7f-459a-988b-77ba856c686c.jpg?v=1709292565" alt="Hair Oil">
+        </div>
+        <div class="product-info">
+            <div class="stars">★★★★★</div>
+            <h4><b>Hair Oil</b></h4>
+            <p>Refreshing and moisturizing.</p>
+            <p class="price">$20</p>
+            <form action="{{ url_for('cart') }}" method="post">
+                <input type="hidden" name="product_name" value="Hair Oil">
+                <input type="hidden" name="product_price" value="20">
+                <button class="add-to-cart" type="submit">Add to Cart</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+    <!-- section3 -->
+    <div>
+        <h2 id="skincare" class="me">Skin Care</h2>
+    </div>
+    <div class="container-fluid">
+      <!-- Product 1 -->
+      <div class="product-card">
+        <div class="product-image">
+            <img src="https://saeedghani.pk/cdn/shop/files/Moisturizing-Cream_906dcf83-9670-4b05-b2b8-b0c6b0bf4eff.jpg?v=1707490657" alt="Moisturizing Cream">
+        </div>
+        <div class="product-info">
+            <div class="stars">★★★★★</div>
+            <h4><b>Moisturizing Cream</b></h4>
+            <p>Experience ultimate hydration with our Moisturizing Cream.</p>
+            <p class="price">$20</p>
+            <form action="{{ url_for('cart') }}" method="post">
+                <input type="hidden" name="product_name" value="Moisturizing Cream">
+                <input type="hidden" name="product_price" value="20">
+                <button class="add-to-cart" type="submit">Add to Cart</button>
+            </form>
+        </div>
+    </div>
+    
+      <!-- Product 2 -->
+      <div class="product-card">
+        <div class="product-image">
+            <img src="https://metafields-manager-by-hulkapps.s3-accelerate.amazonaws.com/uploads/hydropeptidestore.myshopify.com/1705951543-112123_CleansingGel_Results__1_.png" alt="Cleansing Gel">
+        </div>
+        <div class="product-info">
+            <div class="stars">★★★★★</div>
+            <h4><b>Cleansing Gel</b></h4>
+            <p>Enchanting blend of jasmine, rose, and vanilla.</p>
+            <p class="price">$30</p>
+            <form action="{{ url_for('cart') }}" method="post">
+                <input type="hidden" name="product_name" value="Cleansing Gel">
+                <input type="hidden" name="product_price" value="30">
+                <button class="add-to-cart" type="submit">Add to Cart</button>
+            </form>
+        </div>
+    </div>
+    
+      <!-- Product 3 -->
+      <div class="product-card">
+        <div class="product-image">
+            <img src="https://ogorganix.com.pk/wp-content/uploads/2022/08/IMG-4548-scaled.jpg" alt="Face Serum">
+        </div>
+        <div class="product-info">
+            <div class="stars">★★★★★</div>
+            <h4><b>Face Serum</b></h4>
+            <p>Rejuvenate and nourish your skin with our Face Serum.</p>
+            <p class="price">$34</p>
+            <form action="{{ url_for('cart') }}" method="post">
+                <input type="hidden" name="product_name" value="Face Serum">
+                <input type="hidden" name="product_price" value="34">
+                <button class="add-to-cart" type="submit">Add to Cart</button>
+            </form>
+        </div>
+    </div>
+    
+      <!-- Product 4 -->
+      <div class="product-card">
+        <div class="product-image">
+            <img src="https://hermosabeautystore.com/cdn/shop/products/hydrating_mineral_sunscreen_spf30_face_sheer_tint_1_1521x.png?v=1632823884" alt="Sunscreen">
+        </div>
+        <div class="product-info">
+            <div class="stars">★★★★★</div>
+            <h4><b>Sunscreen</b></h4>
+            <p>Protect and nourish your skin with our Sunscreen.</p>
+            <p class="price">$20</p>
+            <form action="{{ url_for('cart') }}" method="post">
+                <input type="hidden" name="product_name" value="Sunscreen">
+                <input type="hidden" name="product_price" value="20">
+                <button class="add-to-cart" type="submit">Add to Cart</button>
+            </form>
+        </div>
+    </div>
+    
+    </div>
+   
+
+    <!-- section3 -->
+    <div>
+        <h2 id="makeup" class="me">MakeUp</h2>
+    </div>
+    <div class="container-fluid">
+      <!-- Product 1 -->
+      <div class="product-card">
+        <div class="product-image">
+            <img src="https://media6.ppl-media.com//tr:h-235,w-235,c-at_max,dpr-2/static/img/product/298025/m-a-c-retro-matte-lipstick-ruby-woo-3-g_6_display_1597648237_99f1a66e.jpg" alt="Matte Lipstick">
+        </div>
+        <div class="product-info">
+            <div class="stars">★★★★★</div>
+            <h4><b>Matte Lipstick</b></h4>
+            <p>Long-lasting matte fragrance in various shades.</p>
+            <p class="price">$20</p>
+            <form action="{{ url_for('cart') }}" method="post">
+                <input type="hidden" name="product_name" value="Matte Lipstick">
+                <input type="hidden" name="product_price" value="20">
+                <button class="add-to-cart" type="submit">Add to Cart</button>
+            </form>
+        </div>
+    </div>
+    
+      <!-- Product 2 -->
+      <div class="product-card">
+        <div class="product-image">
+            <img src="https://www.elfcosmetics.com/dw/image/v2/BBXC_PRD/on/demandware.static/-/Sites-elf-master/default/dw65ac6350/2020/82158_OpenA_R.jpg?sfrm=png&sw=700&q=90" alt="Liquid Lipstick">
+        </div>
+        <div class="product-info">
+            <div class="stars">★★★★★</div>
+            <h4><b>Liquid Lipstick</b></h4>
+            <p>Enchanting blend of jasmine, rose, and vanilla.</p>
+            <p class="price">$30</p>
+            <form action="{{ url_for('cart') }}" method="post">
+                <input type="hidden" name="product_name" value="Liquid Lipstick">
+                <input type="hidden" name="product_price" value="30">
+                <button class="add-to-cart" type="submit">Add to Cart</button>
+            </form>
+        </div>
+    </div>
+    
+      <!-- Product 3 -->
+      <div class="product-card">
+        <div class="product-image">
+            <img src="https://www.beautyclick.co.ke/wp-content/uploads/2024/01/ColorRicheClassicSatinLipstick-258BerryBlush.jpg" alt="Satin Lipstick">
+        </div>
+        <div class="product-info">
+            <div class="stars">★★★★★</div>
+            <h4><b>Satin Lipstick</b></h4>
+            <p>Add a touch of elegance to your makeup look with our Satin Lipstick.</p>
+            <p class="price">$34</p>
+            <form action="{{ url_for('cart') }}" method="post">
+                <input type="hidden" name="product_name" value="Satin Lipstick">
+                <input type="hidden" name="product_price" value="34">
+                <button class="add-to-cart" type="submit">Add to Cart</button>
+            </form>
+        </div>
+    </div>
+    
+      <!-- Product 4 -->
+      <div class="product-card">
+        <div class="product-image">
+            <img src="https://www.elfcosmetics.com/dw/image/v2/BBXC_PRD/on/demandware.static/-/Sites-elf-master/default/dw65ac6350/2020/82158_OpenA_R.jpg?sfrm=png&sw=700&q=90" alt="Sheer Lipstick">
+        </div>
+        <div class="product-info">
+            <div class="stars">★★★★★</div>
+            <h4><b>Sheer Lipstick</b></h4>
+            <p>Enhance your natural beauty with our Sheer Lipstick.</p>
+            <p class="price">$20</p>
+            <form action="{{ url_for('cart') }}" method="post">
+                <input type="hidden" name="product_name" value="Sheer Lipstick">
+                <input type="hidden" name="product_price" value="20">
+                <button class="add-to-cart" type="submit">Add to Cart</button>
+            </form>
+        </div>
+    </div>
+    </div>
+
+
+
+
+    <div class="container-fluid">
+        <!-- Product 1 -->
+        <div class="product-card">
+          <div class="product-image">
+              <img src="https://janeiredale.ie/cdn/shop/products/11309_beyond_matte_liquid_foundation_m9_ALT_2000x_bc07b702-fdba-4d4a-9ce0-09a9ca7f4e0d_1200x.jpg?v=1655904994" alt="Liquid Foundation">
+          </div>
+          <div class="product-info">
+              <div class="stars">★★★★★</div>
+              <h4><b>Liquid Foundation</b></h4>
+              <p>Experience a flawless and long-lasting matte finish with our Liquid Foundation</p>
+              <p class="price">$20</p>
+              <form action="{{ url_for('cart') }}" method="post">
+                  <input type="hidden" name="product_name" value="Liquid Foundation">
+                  <input type="hidden" name="product_price" value="20">
+                  <button class="add-to-cart" type="submit">Add to Cart</button>
+              </form>
+          </div>
+      </div>
+      
+        <!-- Product 2 -->
+        <div class="product-card">
+          <div class="product-image">
+              <img src="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/61/326326/1.jpg?9192" alt="Powder Foundation">
+          </div>
+          <div class="product-info">
+              <div class="stars">★★★★★</div>
+              <h4><b>Powder Foundation</b></h4>
+              <p>Create a flawless complexion with our Powder Foundation.</p>
+              <p class="price">$30</p>
+              <form action="{{ url_for('cart') }}" method="post">
+                  <input type="hidden" name="product_name" value="Powder Foundation">
+                  <input type="hidden" name="product_price" value="30">
+                  <button class="add-to-cart" type="submit">Add to Cart</button>
+              </form>
+          </div>
+      </div>
+      
+        <!-- Product 3 -->
+        <div class="product-card">
+          <div class="product-image">
+              <img src="https://www.lenphor.com/cdn/shop/files/1_4b081bc7-b2ff-4fa7-938b-da9c6c04e2c7.png?v=1701933908" alt="Stick Foundation">
+          </div>
+          <div class="product-info">
+              <div class="stars">★★★★★</div>
+              <h4><b>Stick Foundation</b></h4>
+              <p>Achieve flawless coverage and a natural-looking complexion with our Stick Foundation.</p>
+              <p class="price">$34</p>
+              <form action="{{ url_for('cart') }}" method="post">
+                  <input type="hidden" name="product_name" value="Stick Foundation">
+                  <input type="hidden" name="product_price" value="34">
+                  <button class="add-to-cart" type="submit">Add to Cart</button>
+              </form>
+          </div>
+      </div>
+      
+        <!-- Product 4 -->
+        <div class="product-card">
+          <div class="product-image">
+              <img src="https://m.media-amazon.com/images/I/41S6S93RfyL.jpg" alt="BB cream">
+          </div>
+          <div class="product-info">
+              <div class="stars">★★★★★</div>
+              <h4><b>BB cream</b></h4>
+              <p>Refreshing and moisturizing.</p>
+              <p class="price">$20</p>
+              <form action="{{ url_for('cart') }}" method="post">
+                  <input type="hidden" name="product_name" value="BB cream">
+                  <input type="hidden" name="product_price" value="20">
+                  <button class="add-to-cart" type="submit">Add to Cart</button>
+              </form>
+          </div>
+      </div>
+      </div>
+
+
+      <div class="container-fluid">
+        <!-- Product 1 -->
+        <div class="product-card">
+          <div class="product-image">
+              <img src="https://viseartparis.com/cdn/shop/products/NEUTRALMATTESSLIMPRO.jpg?v=1672355587" alt="Neutral eye shadow">
+          </div>
+          <div class="product-info">
+              <div class="stars">★★★★★</div>
+              <h4><b>Neutral eye shadow</b></h4>
+              <p>Create stunning eye looks with our versatile Neutral Eye Shadow palette.</p>
+              <p class="price">$20</p>
+              <form action="{{ url_for('cart') }}" method="post">
+                  <input type="hidden" name="product_name" value="Neutral eye shadow">
+                  <input type="hidden" name="product_price" value="20">
+                  <button class="add-to-cart" type="submit">Add to Cart</button>
+              </form>
+          </div>
+      </div>
+      
+        <!-- Product 2 -->
+        <div class="product-card">
+          <div class="product-image">
+              <img src="https://m.media-amazon.com/images/I/81SVVj606mL._AC_UF894,1000_QL80_.jpg" alt="Colourful eye shadow">
+          </div>
+          <div class="product-info">
+              <div class="stars">★★★★★</div>
+              <h4><b>Colourful eye shadow</b></h4>
+              <p>Experience the magic of our Colourful Eye Shadow palette and let your eyes shine.</p>
+              <p class="price">$30</p>
+              <form action="{{ url_for('cart') }}" method="post">
+                  <input type="hidden" name="product_name" value="Colourful eye shadow">
+                  <input type="hidden" name="product_price" value="30">
+                  <button class="add-to-cart" type="submit">Add to Cart</button>
+              </form>
+          </div>
+      </div>
+      
+      
+      
+        <!-- Product 3 -->
+        <div class="product-card">
+          <div class="product-image">
+              <img src="https://m.media-amazon.com/images/I/71oPe-wdrIL._AC_UF1000,1000_QL80_.jpg" alt="Eau de Cologne">
+          </div>
+          <div class="product-info">
+              <div class="stars">★★★★★</div>
+              <h4><b>Smoky eye shadow</b></h4>
+              <p>Achieve a smoky eye look.</p>
+              <p class="price">$34</p>
+              <form action="{{ url_for('cart') }}" method="post">
+                  <input type="hidden" name="product_name" value="Smoky eye shadow">
+                  <input type="hidden" name="product_price" value="34">
+                  <button class="add-to-cart" type="submit">Add to Cart</button>
+              </form>
+          </div>
+      </div>
+      
+        <!-- Product 4 -->
+        <div class="product-card">
+          <div class="product-image">
+              <img src="https://i5.walmartimages.com/asr/86864048-1e3b-42f0-b2c9-8dc7bc892484.291102b098041ef71ac1efede9cf307b.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF" alt="Woody">
+          </div>
+          <div class="product-info">
+              <div class="stars">★★★★★</div>
+              <h4><b>Shimmer eye shadow</b></h4>
+              <p>Let your eyes shimmer.</p>
+              <p class="price">$20</p>
+              <form action="{{ url_for('cart') }}" method="post">
+                  <input type="hidden" name="product_name" value="Shimmer eye shadow">
+                  <input type="hidden" name="product_price" value="20">
+                  <button class="add-to-cart" type="submit">Add to Cart</button>
+              </form>
+          </div>
+      </div>
+      
+      </div>
+
+      
+  
+
+<script>
+  // Get cart icon and dropdown elements
+const cartIcon = document.querySelector('.cart-icon');
+const cartDropdown = document.querySelector('.cart-dropdown');
+
+// Add event listener to cart icon
+cartIcon.addEventListener('click', () => {
+  // Toggle cart dropdown visibility
+  cartDropdown.classList.toggle('show');
+});
+
+// Add event listeners to quantity buttons
+document.querySelectorAll('.qty-minus,.qty-plus').forEach((button) => {
+  button.addEventListener('click', (e) => {
+    const input = e.target.parentNode.querySelector('input');
+    const currentValue = parseInt(input.value);
+    const newValue = e.target.classList.contains('qty-minus')? currentValue - 1 : currentValue + 1;
+    input.value = newValue;
+  });
+});
+
+// Add event listener to cart remove buttons
+document.querySelectorAll('.cart-remove').forEach((button) => {
+  button.addEventListener('click', (e) => {
+    const cartItem = e.target.parentNode;
+    cartItem.remove();
+    updateCartCount();
+  });
+});
+
+// Update cart count function
+function updateCartCount() {
+  const cartItems = document.querySelectorAll('.cart-item');
+  const cartCount = cartItems.length;
+  document.querySelector('.cart-count').textContent = cartCount;
+}
+
+// Initialize cart count
+updateCartCount();
+</script>
+      <footer>
+        <div class="footer-container">
+          <div class="footer-links">
+            <h3>Customer Service</h3>
+            <ul>
+              <li><a href="https://fentybeauty.com/en-ke">Order Status</a></li>
+              <li><a href="https://fentybeauty.com/en-ke">Shipping Information</a></li>
+              <li><a href="https://fentybeauty.com/en-ke">Returns</a></li>
+              <li><a href="https://fentybeauty.com/en-ke">Contact Us</a></li>
+              <li><a href="https://fentybeauty.com/en-ke">Help & FAQs</a></li>
+            </ul>
+          </div>
+          <div class="contact-info">
+            <h3>Contact Information</h3>
+            <p>Email: omarfarouqmadey@gmail.com</p>
+            <p>Email: tasnasomo@gmail.com</p>
+            <p>Phone: 0728473046 & 0720290800</p>
+            <p class="loo"><b>Operating Hours:</b></p>
+            <p>Mon-Fri: 9am-9pm EST</p>
+            <p>Sat: 9am-6pm EST</p>
+          </div>
+          <div class="reach-us">
+            <h3><span>Social media</span></h3>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/Omar Farouq abdi"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://www.twitter.com/Omar Farouq abdi"><i class="fab fa-twitter"></i></a>
+              <a href="https://www.instagram.com/i.am_o.mar?igsh=MTh5b2JyczQ5dWNtOQ=="><i class="fab fa-instagram"></i></a>
+              <a href="https://www.tiktok.com/magnificent"><i class="fab fa-tiktok"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="decorative-line"></div>
+        <div class="developers">
+                <p>Developed by Omar Farouq and Tasnim Mohamed</p>
+        </div>
+        <div class="copyright">
+          <p>&copy; 2024 Sereneglow. All rights reserved.</p>
+        </div>
+      </footer>
+
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
