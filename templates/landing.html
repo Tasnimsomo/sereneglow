@@ -1,66 +1,142 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Landing Page</title>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-  }
-  header {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-  }
-  .container {
-    max-width: 1200px;
-    margin: 20px auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
-    padding: 0 20px;
-  }
-  .image-link {
-    text-align: center;
-  }
-  .image-link img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
-  }
-  .image-link img:hover {
-    transform: scale(1.1);
-  }
-</style>
+    <title>SereneGlow Boutique Landing Page</title>
+    <!-- Import Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+
+    <style>
+        /* Reset some basic styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* General styles */
+        body {
+            font-family: 'Roboto', sans-serif; /* Use Roboto font */
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5; /* Fallback background color */
+            background-image: linear-gradient(45deg, #87CEEB, #FFC0CB); /* Gradient background */
+        }
+
+        /* Header styles */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Main content styles */
+        main {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        h1, h2 {
+            color: #333;
+            margin-bottom: 20px;
+            font-weight: 700; /* Use bold font for headings */
+        }
+
+        p {
+            margin-bottom: 20px;
+            font-weight: 400; /* Use normal font weight for paragraphs */
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        li img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 10px;
+        }
+
+        a {
+            display: inline-block;
+            background-color: #333;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        a:hover {
+            background-color: #555;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
 </head>
 <body>
-<header>
-  <h1>Welcome to My Landing Page</h1>
-</header>
-<div class="container">
-  <div class="image-link">
-    <a href="#">
-      <img src="image1.jpg" alt="Image 1">
-    </a>
-  </div>
-  <div class="image-link">
-    <a href="#">
-      <img src="image2.jpg" alt="Image 2">
-    </a>
-  </div>
-  <div class="image-link">
-    <a href="#">
-      <img src="image3.jpg" alt="Image 3">
-    </a>
-  </div>
-</div>
+    <header>
+        <nav>
+            <!-- Add navigation links here -->
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h1>Welcome to SereneGlow Boutique</h1>
+            <p>Elevate your beauty experience.</p>
+        </section>
+        <section>
+            <h2>Features</h2>
+            <ul>
+                <li>Responsive on any device
+                    <br><blockquote class="imgur-embed-pub" lang="en" data-id="RWCkAWr"><a href="https://imgur.com/RWCkAWr">View post on imgur.com</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+                </li>
+                <li>Aesthetic
+                    <br><blockquote class="imgur-embed-pub" lang="en" data-id="undefined"><a href="https://imgur.com/undefined">View post on imgur.com</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2>Get Started</h2>
+            <a href="{{ url_for('index') }}">Go to Main App</a>
+        </section>
+    </main>
+    <footer>
+        <!-- Add footer content here -->
+    </footer>
+    <!-- Load Imgur embed script once -->
+    <script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
 </body>
 </html>
 
