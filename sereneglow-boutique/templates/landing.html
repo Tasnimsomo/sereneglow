@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sereneglow Cosmetics</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f8f8f8;
+        }
+        .header {
+            background-color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .header .logo {
+            font-family: 'Cursive', sans-serif;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .header nav {
+            display: flex;
+            gap: 20px;
+        }
+        .header nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+        .hero {
+            position: relative;
+            background-image: url('/path_to_your_image.jpg'); /* replace with your image path */
+            background-size: cover;
+            background-position: center;
+            height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #333;
+        }
+        .hero-content {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .hero h1 {
+            font-size: 36px;
+            margin: 0;
+        }
+        .hero p {
+            margin: 20px 0;
+            font-size: 18px;
+            color: #666;
+        }
+        .hero .cta-button {
+            background-color: #e60023;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            text-transform: uppercase;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 20px;
+            justify-content: center;
+        }
+        .gallery img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">Sereneglow</div>
+        <nav>
+            <a href="#">Makeup</a>
+            <a href="#">Skincare</a>
+            <a href="#">Fragrance</a>
+            <a href="#">Hair</a>
+            <a href="#">Profile</a>
+            <a href="#">Logout</a>
+            <a href="#">My Cart (0)</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>SUPERCHARG'D SKINCARE IN YOUR SHADE</h1>
+            <p>Hydra Vizor Huez Tinted Moisturizer Mineral SPF 30 Sunscreen.</p>
+            <button class="cta-button">Sneak Peek</button>
+        </div>
+    </section>
+
+    <section class="gallery">
+        <img src="/path_to_your_image1.jpg" alt="Product 1"> <!-- Replace with your image paths -->
+        <img src="/path_to_your_image2.jpg" alt="Product 2">
+        <img src="/path_to_your_image3.jpg" alt="Product 3">
+        <img src="/path_to_your_image4.jpg" alt="Product 4">
+        <img src="/path_to_your_image5.jpg" alt="Product 5">
+    </section>
+
+</body>
+</html>

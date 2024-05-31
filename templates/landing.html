@@ -1,142 +1,178 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>SereneGlow Boutique Landing Page</title>
-    <!-- Import Google Fonts -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sereneglow Cosmetics</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Satisfy&display=swap">
     <style>
-        /* Reset some basic styles */
-        * {
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
             box-sizing: border-box;
+            background-color: #f7ede2;
+        }
+
+        .header {
+            background-color: #fff;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .header .logo {
+            font-family: 'Satisfy', cursive;
+            font-size: 36px;
+            color: #e67e22;
+        }
+
+        .header .tagline {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 700;
+            font-size: 24px;
+            color: #e67e22;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        nav ul {
+            list-style-type: none;
             margin: 0;
             padding: 0;
         }
 
-        /* General styles */
-        body {
-            font-family: 'Roboto', sans-serif; /* Use Roboto font */
-            line-height: 1.6;
-            color: #333;
-            background-color: #f5f5f5; /* Fallback background color */
-            background-image: linear-gradient(45deg, #87CEEB, #FFC0CB); /* Gradient background */
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
         }
 
-        /* Header styles */
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-
-        nav a {
-            color: #fff;
+        nav ul li a {
             text-decoration: none;
-            margin: 0 10px;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
-        }
-
-        /* Main content styles */
-        main {
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        section {
-            margin-bottom: 40px;
-        }
-
-        h1, h2 {
             color: #333;
-            margin-bottom: 20px;
-            font-weight: 700; /* Use bold font for headings */
+            font-size: 18px;
         }
 
-        p {
-            margin-bottom: 20px;
-            font-weight: 400; /* Use normal font weight for paragraphs */
-        }
-
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        li {
-            margin-bottom: 20px;
+        .hero {
+            position: relative;
+            background-image: url('https://i.imgur.com/ChGtGyf.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
             display: flex;
-            flex-direction: column;
             align-items: center;
+            justify-content: center;
+            color: #333;
         }
 
-        li img {
-            max-width: 100%;
-            height: auto;
-            margin-top: 10px;
+        .hero-content {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 40px;
+            border-radius: 10px;
+            max-width: 600px;
         }
 
-        a {
-            display: inline-block;
-            background-color: #333;
+        .hero h1 {
+            font-size: 48px;
+            margin: 0;
+            color: #e67e22;
+        }
+
+        .hero p {
+            margin: 20px 0;
+            font-size: 20px;
+            color: #666;
+        }
+
+        .cta-button {
+            background-color: #e67e22;
             color: #fff;
-            text-decoration: none;
-            padding: 10px 20px;
+            padding: 12px 24px;
+            border: none;
             border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            text-transform: uppercase;
+            text-decoration: none;
             transition: background-color 0.3s ease;
         }
 
-        a:hover {
-            background-color: #555;
+        .cta-button:hover {
+            background-color: #d67118;
         }
 
-        /* Footer styles */
-        footer {
-            background-color: #333;
-            color: #fff;
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 40px;
+            justify-content: center;
+        }
+
+        .gallery-item {
             text-align: center;
-            padding: 20px;
+        }
+
+        .gallery img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        .category {
+            margin-top: 10px;
+            font-size: 16px;
+            color: #666;
         }
     </style>
 </head>
 <body>
-    <header>
+    <header class="header">
+        <div class="logo">Sereneglow</div>
+        <div class="tagline">ELEVATE YOUR BEAUTY EXPERIENCE</div>
         <nav>
-            <!-- Add navigation links here -->
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+            </ul>
         </nav>
     </header>
-    <main>
-        <section>
-            <h1>Welcome to SereneGlow Boutique</h1>
-            <p>Elevate your beauty experience.</p>
-        </section>
-        <section>
-            <h2>Features</h2>
-            <ul>
-                <li>Responsive on any device
-                    <br><blockquote class="imgur-embed-pub" lang="en" data-id="RWCkAWr"><a href="https://imgur.com/RWCkAWr">View post on imgur.com</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
-                </li>
-                <li>Aesthetic
-                    <br><blockquote class="imgur-embed-pub" lang="en" data-id="undefined"><a href="https://imgur.com/undefined">View post on imgur.com</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
-                </li>
-            </ul>
-        </section>
-        <section>
-            <h2>Get Started</h2>
-            <a href="{{ url_for('index') }}">Go to Main App</a>
-        </section>
-    </main>
-    <footer>
-        <!-- Add footer content here -->
-    </footer>
-    <!-- Load Imgur embed script once -->
-    <script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <h1>SUPERCHARG'D SKINCARE IN YOUR SHADE</h1>
+            <p>Hydra Vizor Huez Tinted Moisturizer Mineral SPF 30 Sunscreen.</p>
+            <a href="/sereneglow" class="cta-button">Sneak Peek</a>
+        </div>
+    </section>
+
+    <section id="gallery" class="gallery">
+        <div class="gallery-item">
+            <img src="https://elements.togetherjournal.com/uploads/2018/10/92dafa8f-1i2a1633.jpg" alt="Fragrance">
+            <div class="category">Fragrance</div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://georgiemane.com/cdn/shop/files/22-HairMaskPDP-002-Georgiemane-1102_1x1_d45b0c08-46e5-454f-bde3-4697e43fb27b.jpg?v=1699319509" alt="Product 2">
+            <div class="category">Hair Care</div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://media6.ppl-media.com//tr:h-235,w-235,c-at_max,dpr-2/static/img/product/298025/m-a-c-retro-matte-lipstick-ruby-woo-3-g_6_display_1597648237_99f1a66e.jpg" alt="Product 3">
+            <div class="category">Makeup</div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://metafields-manager-by-hulkapps.s3-accelerate.amazonaws.com/uploads/hydropeptidestore.myshopify.com/1705951543-112123_CleansingGel_Results__1_.png" alt="Product 4">
+            <div class="category">Skin Care</div>
+        </div>
+    </section>
 </body>
 </html>
-
