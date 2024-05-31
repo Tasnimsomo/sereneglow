@@ -1,15 +1,29 @@
-- name: Build
-  run: |
-    export FLASK_APP=app.py
-    export FLASK_ENV=production
-    flask run --host=localhost --port=5000 &  # Start the Flask application in the background
-    sleep 5  # Wait for the Flask application to start
+name: Deploy to GitHub Pages
 
-    # Make a request to trigger the build process (replace the URL with the appropriate endpoint)
-    curl http://localhost:5000/build
+on:
+  push:
+    branches:
+      - main
 
-    # Wait for the build process to complete (adjust the sleep duration if needed)
-    sleep 10
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
 
-    # Stop the Flask application
-    killall flask
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          deploy_key: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: .  # Set this to the root directory of your Flask application
+
