@@ -19,5 +19,5 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           deploy_key: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: .  # Serve the Flask app from the repository root
+          publish_dir: dist  # Serve the Flask app from the repository root
           force_orphan: true  # Overwrite the existing deployment
