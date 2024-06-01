@@ -13,3 +13,11 @@ Base.metadata.create_all(engine)
 
 Session = sessionmaker(bind=engine)
 session = Session()
+try:
+    engine = create_engine(SQLALCHEMY_DATABASE_URI)
+    Base.metadata.create_all(engine)
+    Session = sessionmaker(bind=engine)
+    session = Session()
+    print("Database connection successful!")
+except Exception as e:
+    print("Database connection failed:", e)
