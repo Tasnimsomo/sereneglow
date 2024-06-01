@@ -6,3 +6,4 @@ Flask-Bcrypt
 email-validator
 gunicorn
 python-dotenv
+mysql-connector-python
