@@ -8,16 +8,12 @@ import os
 
 load_dotenv('.env')
 SQLALCHEMY_DATABASE_URI = os.environ.get('SQLALCHEMY_DATABASE_URI')
+print(f"SQLALCHEMY_DATABASE_URI: {SQLALCHEMY_DATABASE_URI}")
+
+if not SQLALCHEMY_DATABASE_URI:
+    raise ValueError("No SQLALCHEMY_DATABASE_URI set for the database URL")
 engine = create_engine(SQLALCHEMY_DATABASE_URI)
 Base.metadata.create_all(engine)
 
 Session = sessionmaker(bind=engine)
 session = Session()
-try:
-    engine = create_engine(SQLALCHEMY_DATABASE_URI)
-    Base.metadata.create_all(engine)
-    Session = sessionmaker(bind=engine)
-    session = Session()
-    print("Database connection successful!")
-except Exception as e:
-    print("Database connection failed:", e)
