@@ -19,7 +19,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
 bcrypt = Bcrypt(app)
-
+migrate = Migrate(app, db)
 # Configure Flask-Login
 login_manager = LoginManager()
 login_manager.init_app(app)
