@@ -8,3 +8,4 @@ email-validator==1.1.3
 python-dotenv
 mysql-connector-python
 gunicorn
+psycopg2-binary==2.9.6
