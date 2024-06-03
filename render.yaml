@@ -9,5 +9,5 @@ services:
       - key: app.secret_key
         value: 'your_secret_key'
       - key: SQLALCHEMY_DATABASE_URI
-        value: 'mysql+mysqlconnector://user:password@localhost:3306/sereneglow'
+        value: 'mysql+mysqlconnector://newuser:G8#yJx!1TbZq&9wP@localhost:3306/sereneglow'
 
